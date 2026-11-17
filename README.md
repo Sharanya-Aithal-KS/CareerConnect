@@ -1,43 +1,183 @@
-# Job Portal Web Application
+# Career Connect – Job Portal Web Application
 
-## Description
-The Job Portal Web Application is a platform built with Spring Boot 3, Spring MVC, Thymeleaf, and MySQL. It streamlines the recruitment process by allowing candidates to apply for jobs and enabling recruiters to view applications and download resumes. The application is designed to provide a seamless user experience with role-based access and secure handling of user data.
+Career Connect is a web-based recruitment management system developed using **Java and the Spring Framework**. It provides a centralized platform connecting job seekers and recruiters, simplifying the recruitment process through job postings, applications, profile management, and resume handling.
 
-## Key Technologies
-- **Spring Boot 3**
-- **Spring MVC**
-- **Thymeleaf**
-- **Spring Security**
-- **Spring Data JPA**
-- **Hibernate**
-- **MySQL Database**
+## Overview
+
+The application provides dedicated interfaces for candidates and recruiters, allowing candidates to explore job opportunities and apply for suitable positions, while recruiters can publish vacancies and manage applications efficiently.
+
+Built using Spring Boot and the MVC architecture, Career Connect emphasizes secure authentication, efficient database management, and a user-friendly interface.
 
 ## Features
-- **Role-Based Access:** 
-  - Candidates can apply for jobs.
-  - Recruiters can view and download resumes.
 
-- **Custom Success Handlers:** Provides tailored user experiences based on role-specific actions after login.
+### Candidate Module
+- User registration and secure login.
+- Create and update candidate profiles.
+- Browse and search job opportunities.
+- Apply for available job openings.
+- Upload resumes and profile photos.
+- Save jobs for future reference.
+- View saved jobs.
 
-- **Comprehensive CRUD Operations:** Manage job postings, applications, and user profiles efficiently.
+### Recruiter Module
+- Recruiter registration and secure login.
+- Create and manage job postings.
+- View posted job vacancies.
+- Review candidate applications.
+- Download candidate resumes.
+- Manage recruiter profiles.
 
-## Screenshots
+### Security and Management
+- Role-based authentication and authorization using Spring Security.
+- Password encryption.
+- Custom authentication success handlers.
+- CRUD operations for jobs, applications, and user profiles.
+- Input validation and secure file handling.
 
-![Screenshot (157)](https://github.com/user-attachments/assets/d98f2535-842e-4515-b775-48c43bcc1d18)
-![Screenshot (146)](https://github.com/user-attachments/assets/be3950b0-33ce-4bd3-9e16-78e2b4dfd9f1)
-![Screenshot (147)](https://github.com/user-attachments/assets/21e286bc-d865-4ae8-a3e1-ad82d3accdae)
-![Screenshot (148)](https://github.com/user-attachments/assets/0602d7fe-3997-4a0f-8e8b-d1449c2a2d6d)
-![Screenshot (149)](https://github.com/user-attachments/assets/56a7d854-4fe7-4c79-939f-13553dc998c5)
-![Screenshot (150)](https://github.com/user-attachments/assets/e19187ce-bda6-4bc2-86f5-fd014f163097)
-![Screenshot (151)](https://github.com/user-attachments/assets/c8499cbf-3c19-4248-bc76-409dafd338a0)
-![Screenshot (152)](https://github.com/user-attachments/assets/75bc3f80-2078-4ca5-b60b-866373717111)
-![Screenshot (153)](https://github.com/user-attachments/assets/ec96d2b1-a8fb-483a-9514-f79fcb22c6c0)
-![Screenshot (154)](https://github.com/user-attachments/assets/3c38c3ff-ee6b-4b1d-ac4d-595c262887b8)
-![Screenshot (155)](https://github.com/user-attachments/assets/021c443c-b79e-4a5c-b504-6d67d753f81a)
-![Screenshot (156)](https://github.com/user-attachments/assets/2a774da5-a735-4774-97fe-f909bf449156)
+## Technology Stack
 
+| Technology | Purpose |
+|---|---|
+| Java | Backend programming |
+| Spring Boot 3 | Application framework |
+| Spring MVC | MVC architecture |
+| Spring Security | Authentication and authorization |
+| Spring Data JPA | Database operations |
+| Hibernate | Object-relational mapping |
+| MySQL | Relational database |
+| Thymeleaf | Server-side UI rendering |
+| HTML5 & CSS3 | Frontend development |
+| Bootstrap | Responsive UI design |
+| Maven | Dependency and build management |
+| Apache Tomcat | Application server |
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Suraj9921/job-portal-web-app.git
+## Architecture
+
+The application follows the Model–View–Controller (MVC) architecture.
+
+- **Model:** Manages application entities and database operations.
+- **View:** Renders dynamic web pages using Thymeleaf.
+- **Controller:** Handles HTTP requests and coordinates application workflows.
+- **Service Layer:** Implements business logic.
+- **Repository Layer:** Manages database interactions using Spring Data JPA and Hibernate.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure the following are installed:
+
+- Java JDK 17 or compatible version.
+- Maven.
+- MySQL Server.
+- Git.
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Sharanya-Aithal-KS/Career-Connect.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd Career-Connect
+```
+
+**3. Configure the database**
+
+Create a MySQL database and update the database credentials in:
+
+```text
+src/main/resources/application.properties
+```
+
+Configure the database URL, username, and password according to your local MySQL setup.
+
+**4. Build the application**
+
+On Windows:
+
+```bash
+mvnw.cmd clean install
+```
+
+Alternatively:
+
+```bash
+mvn clean install
+```
+
+**5. Run the application**
+
+```bash
+mvnw.cmd spring-boot:run
+```
+
+**6. Access the application**
+
+Open your browser and navigate to:
+
+```text
+http://localhost:8080
+```
+
+## Project Structure
+
+```text
+Career-Connect/
+│
+├── .mvn/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/jobportal/
+│   │   │       ├── config/
+│   │   │       ├── controller/
+│   │   │       ├── entity/
+│   │   │       ├── repository/
+│   │   │       ├── service/
+│   │   │       └── util/
+│   │   │
+│   │   └── resources/
+│   │       ├── static/
+│   │       ├── templates/
+│   │       └── application.properties
+│   │
+│   └── test/
+│
+├── Output/
+├── target/
+├── pom.xml
+├── mvnw
+├── mvnw.cmd
+└── README.md
+```
+
+## User Interface
+
+The application includes dedicated interfaces for different user roles:
+
+- Home page with job search functionality.
+- Candidate registration and login.
+- Recruiter registration and login.
+- Candidate dashboard and saved jobs.
+- Recruiter dashboard and job posting interface.
+- Candidate and recruiter profile management.
+
+## Future Enhancements
+
+- AI-based job recommendations.
+- Resume scoring and analysis.
+- Real-time notifications.
+- Recruiter–candidate chat functionality.
+- Cloud deployment using AWS or Azure.
+- Integration with professional networking platforms.
+
+## Author
+
+**Sharanya Aithal KS**
+
+GitHub: [@Sharanya-Aithal-KS](https://github.com/Sharanya-Aithal-KS)
