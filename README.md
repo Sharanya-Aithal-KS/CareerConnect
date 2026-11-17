@@ -167,6 +167,34 @@ The application includes dedicated interfaces for different user roles:
 - Recruiter dashboard and job posting interface.
 - Candidate and recruiter profile management.
 
+
+## Screenshots
+
+The following screenshots showcase the user interface and functionalities of the Career Connect Job Portal.
+
+### Application Screenshots
+
+![Screenshot 1](Output/1.png)
+
+![Screenshot 2](Output/2.png)
+
+![Screenshot 4](Output/4.png)
+
+![Screenshot 5](Output/5.png)
+
+![Screenshot 6](Output/6.png)
+
+![Screenshot 7](Output/7.png)
+
+![Screenshot 8](Output/8.png)
+
+![Screenshot 10](Output/10.png)
+
+![Screenshot 11](Output/11.png)
+
+![Screenshot 12](Output/12.png)
+
+
 ## Future Enhancements
 
 - AI-based job recommendations.
